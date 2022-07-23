@@ -6,6 +6,9 @@ import {
   getCurrentTurnElement,
   getGameStatusElement,
 } from "./selectors.js";
+import { checkGameStatus } from "./utils.js";
+
+console.log(checkGameStatus(["X", "O", "O", "", "X", "", "", "O", "X"]));
 
 console.log(getCellElementList());
 console.log(getCurrentTurnElement());
@@ -24,7 +27,6 @@ function toggleTurn() {
   currentTurn = currentTurn === TURN.CIRCLE ? TURN.CROSS : TURN.CIRCLE;
 
   //   update turn on DOM element
-
   const currentTurnElement = getCurrentTurnElement();
   if (currentTurnElement) {
     currentTurnElement.classList.remove(TURN.CIRCLE, TURN.CROSS);
