@@ -73,6 +73,8 @@ function handleCellClick(cell, index) {
 
   const isEndGame = gameStatus !== GAME_STATUS.PLAYING;
 
+  // Only allow to click if game is playing and that cell is not clicked yet
+
   if (isClicked || isEndGame) return;
 
   // set selected cell
