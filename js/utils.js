@@ -68,8 +68,8 @@ export function checkGameStatus(cellValues) {
     return first !== "" && first === second && second === third;
   });
   if (winSetIndex >= 0) {
-    const winValuesIndex = checkSetList[winSetIndex][1];
-    const winValue = cellValues[winValuesIndex];
+    const winValueIndex = checkSetList[winSetIndex][1];
+    const winValue = cellValues[winValueIndex];
 
     return {
       status:
